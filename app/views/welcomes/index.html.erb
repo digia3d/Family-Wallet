@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Welcomes</h1>
-
-<div id="welcomes">
-  <% @welcomes.each do |welcome| %>
-    <%= render welcome %>
-    <p>
-      <%= link_to "Show this welcome", welcome %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New welcome", new_welcome_path %>
+<section class="welcome">
+    <% if user_signed_in? %>
+      <h1>Welcome, <%= current_user.name %>, to your Family Wallet</h1>
+      <%= link_to "Categories", categories_path, class: "btn btn-primary" %>
+      <% else %>
+      <h1>Welcome to Family Wallet</h1>
+      <p>Family Wallet is a simple app that allows you to keep track of your family's expenses.</p>
+      <p>Sign up to get started!</p>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+    <% end %>
+</section>
