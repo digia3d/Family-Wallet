@@ -1,6 +1,7 @@
 <section class="welcome">
+  <div class="container">
     <% if user_signed_in? %>
-      <h1>Welcome, <%= current_user.name %>, to your Family Wallet</h1>
+      <h1>Welcome <%= current_user.name %>, to your Family Wallet</h1>
       <%= link_to "Categories", categories_path, class: "btn btn-primary" %>
       <% else %>
       <h1>Welcome to Family Wallet</h1>
@@ -9,4 +10,5 @@
       <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
       <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
     <% end %>
+  </div>
 </section>
