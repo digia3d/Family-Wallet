@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
     respond_to do |format|
-      format.html { render :edit, locals: {post: @category}}
+      format.html { render :edit, locals: { post: @category } }
     end
   end
 
