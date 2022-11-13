@@ -4,27 +4,30 @@ class ExpensesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @expenses = Expense.all
+    @expenses = Expense.all.order('expenses.created_at DESC')
   end
 
-  def show; end
+  def show
+    @expense = Expense.find(params[:id])
+  end
 
   def new
     @expense = Expense.new
   end
 
-  def edit; end
-
   def create
     @expense = Expense.new(expense_params)
+    @expense.user_id = current_user.id
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
-        format.json { render :show, status: :created, location: @expense }
+        @category = ExpenseCategory.create(expense_id: @expense.id, category_id:,expense_category_params[:category.id])
+        @category.increment_total
+        format.html do
+          redirect_to category_expense_categories_path(@category.category_id), notice: 'Expense was successfully created.'
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -32,21 +35,21 @@ class ExpensesController < ApplicationController
   def update
     respond_to do |format|
       if @expense.update(expense_params)
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully updated.' }
-        format.json { render :show, status: :ok, location: @expense }
+        format.html { redirect_to category_path(@expense.category_id), notice: 'Expense was successfully updated.' }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
+    @expense = Expense.find(params[:id])
+    @expense.expense_categories.first.decrement_total
     @expense.destroy
 
     respond_to do |format|
-      format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html do redirect_to category_expense_categories_path(@expense), notice: 'Expense was successfully destroyed.'
+      end
     end
   end
 
@@ -57,6 +60,10 @@ class ExpensesController < ApplicationController
   end
 
   def expense_params
-    params.require(:expense).permit(:index, :new, :show)
+    params.require(:expense).permit(:name, :amount)
+  end
+
+  def expense_category_params
+    params.require(:expense).permit(:category_id)
   end
 end
