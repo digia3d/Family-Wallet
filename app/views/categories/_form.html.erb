@@ -11,22 +11,31 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :index, style: "display: block" %>
-    <%= form.text_field :index %>
+  <div class="field mt-3">
+    <%= form.text_field :name, class:"form-control", placeholder: "Name" %>
   </div>
 
-  <div>
-    <%= form.label :new, style: "display: block" %>
-    <%= form.text_field :new %>
+  <div class="field mt-3">
+    <%= form.label :icon, class:"block text-gray-700 font-bold mb-2", style: "display: block" %>
+    <%= form.select :icon, [
+      ["Household goods", "house-chimney-window-solid.svg"],
+      ["Bills", "money-bill-1-wave-solid.svg"],
+      ["Clothing", "shirt-solid.svg"],
+      ["Medicines", "notes-medical-solid.svg"],
+      ["Holidays", "snowman-solid.svg"],
+      ["Gifts", "gift-fill.svg"],
+      ["Fuel", "fuel-pump.svg"],
+      ["Pets", "paw-solid.svg"],
+      ["Food", "basket-shopping-solid.svg"],
+      ["other", "gear-solid.svg"]
+    ], class: 'form-control', placeholder: 'icon' %>
   </div>
 
-  <div>
-    <%= form.label :show, style: "display: block" %>
-    <%= form.text_field :show %>
+  <div class="field mt-3">
+    <%= form.text_field :description, class:"form-control", placeholder: "Description" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div calass="field mt-3">
+    <%= form.submit 'Submit', class: 'form-control' %>
   </div>
 <% end %>
