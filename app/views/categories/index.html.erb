@@ -4,21 +4,28 @@
     <h1 class="CT">Categories</h1>
 
     <div id="categories">
-      <% @categories.each do |category| %>
-      <% if can? :delete, category %>
-      <p>
-      <%= render category %>
-      </p>
-      </div>
-      <div>
-      <%= link_to 'Edit', edit_category_path(category) %>
-      <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-      <% end %>
-    </div>
-    <div>
-      <% end %>
-    </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @categories.each do |category| %>
+                    <% if can? :destroy, category %>
+                      <tr>
+                          <td><%= render category %></td>
+                          <td>
+                              <%= link_to 'Edit', edit_category_path(category), class: "btn btn-primary" %>
+                              <%= link_to 'Destroy', category_path(category.id), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                          </td>
+                          
+                      </tr>
+                    <% end %>
+              <% end %>
+            </tbody>
+        </table>
 
     <%= link_to "New category", new_category_path %>
 </div>
