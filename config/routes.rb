@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :expense_categories, only: [:index]
   end
 
-  resources :expenses, only: [:new, :create, :show, :destroy]
+  resources :expenses, only: [:new, :create, :show, :destroy] do
+    resources :expense, only: [:new, :edit, :update]
+  end
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
