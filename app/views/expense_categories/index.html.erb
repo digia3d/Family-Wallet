@@ -1,14 +1,45 @@
+<%= render "layouts/navbar" %>
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
-<h1>Expense categories</h1>
+<h1>
+  Expenses
+<%= @category.name %>
+<%= image_tag @category.icon %>
+</h1>
 
-<div id="expense_categories">
-  <% @expense_categories.each do |expense_category| %>
-    <%= render expense_category %>
-    <p>
-      <%= link_to "Show this expense category", expense_category %>
-    </p>
+<div>
+  <p>
+    <%= @category.description %>
+  </p>
+</div>
+
+<div class="total-count">
+  <span>Total Amount: </span>
+  <span>$<%= @category.total %></span>
+</div>
+
+<div class="ExCat">
+  <% if @expenses.empty? %>
+    <p>No expenses yet</p>
+  <% else %>
+    <% @expenses.each do |expense| %>
+      <div class="expenseL">
+        <div class="expense-name">
+          <%= expense.name %>
+        </div>
+        <div class="expense-amount">
+          $<%= expense.amount %>
+        </div>
+        <div class="show">
+          <%= link_to 'Show', expense_path(expense) %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New expense category", new_expense_category_path %>
+<span><%= link_to "Category", categories_path %></span>
+
+<%= link_to "New expense category", new_expense_path %>
+</div>
