@@ -1,18 +1,22 @@
 <div id="<%= dom_id category %>" class="render-category">
-  <p>
-    <strong><%= category.name %>:</strong>
-    <%= image_tag category.icon, alt: 'icon' %>
-  </p>
+  <div class="cat">
+    <p class="p1">
+      <strong><%= category.name %>:</strong>
+      <%= image_tag category.icon, alt: 'icon', class: 'img' %>
+    </p>
 
-  <p>
-    <strong>Item:</strong>
-    <% if can? :read, category %>
-      <%= link_to category.name, category_expense_categories_path(category.id) %>
-      <% end %>
-  </p>
+    <p class="p2">
+      <strong>Item:</strong>
+      <% if can? :read, category %>
+        <%= link_to category.name, category_expense_categories_path(category.id) %>
+        <% end %>
+    </p>
 
-  <p>
-    <strong>Total:</strong>$
-    <%= category.total %>
-  </p>
+    <p class="p3">
+      <strong>Total:</strong>$
+      <%= category.total %>
+    </p>
+    
+  </div>
+
 </div>

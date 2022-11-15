@@ -1,6 +1,5 @@
-<%= render "layouts/navbar" %>
+<%= render partial: "layouts/navbar", locals: {heading: 'NEW EXPENSE', back_path: categories_path} %>
 <div class="container">
-  <h1>New expense</h1>
 
   <%= render "form", expense: @expense %>
 

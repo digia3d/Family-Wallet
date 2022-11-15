@@ -1,5 +1,4 @@
 class ExpensesController < ApplicationController
-
   before_action :authenticate_user!
 
   def index
@@ -58,16 +57,15 @@ class ExpensesController < ApplicationController
 
   private
 
-    def set_expense
-      @expense = Expense.find(params[:id])
-    end
-
-    def expense_params
-      params.require(:expense).permit(:name, :amount)
-    end
-
-    def expense_category_params
-      params.require(:expense).permit(:category_id)
-    end
+  def set_expense
+    @expense = Expense.find(params[:id])
   end
 
+  def expense_params
+    params.require(:expense).permit(:name, :amount)
+  end
+
+  def expense_category_params
+    params.require(:expense).permit(:category_id)
+  end
+end

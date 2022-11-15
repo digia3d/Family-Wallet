@@ -1,8 +1,6 @@
-<%= render "layouts/navbar" %>
+<%= render partial: "layouts/navbar", locals: {heading: 'EXPENSES', back_path: categories_path} %>
 <div class="container">
 <p style="color: green"><%= notice %></p>
-
-<h1>Expenses</h1>
 
 <div id="expenses">
   <% @expenses.each do |expense| %>

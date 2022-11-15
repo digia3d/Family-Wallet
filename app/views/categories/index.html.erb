@@ -4,18 +4,13 @@
 
     <div id="categories">
         <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                </tr>
-            </thead>
             <tbody>
                 <% @categories.each do |category| %>
                     <% if can? :edit, category %>
                         <tr>
-                            <td><%= render category %></td>
                             <td>
-                                <%= link_to 'Edit', edit_category_path(category), class: "btn-edit" %>
+                            <%= render category %>
+                            <%= link_to 'Edit', edit_category_path(category), class: "btn-edit" %>
                             </td>
                         </tr>
                     <% end %>
@@ -23,6 +18,6 @@
             </tbody>
         </table>
 
-<footer class="footer">
-<%= link_to "New category", new_category_path, class: 'btn' %>
-</footer>
+<div class="footer">
+<%= link_to "New category", new_category_path, class: 'btn-create' %>
+</div>
