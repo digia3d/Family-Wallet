@@ -1,17 +1,18 @@
-<div id="<%= dom_id category %>">
+<div id="<%= dom_id category %>" class="render-category">
   <p>
     <strong>Index:</strong>
-    <%= category.index %>
+    <%= image_tag category.icon, alt: 'icon' %>
   </p>
 
   <p>
     <strong>New:</strong>
-    <%= category.new %>
+    <% if can? :read, category %>
+      <%= link_to category.name, category_expense_categories_path(category.id) %>
+      <% end %>
   </p>
 
   <p>
-    <strong>Show:</strong>
-    <%= category.show %>
+    <strong>Show:</strong>$
+    <%= category.total %>
   </p>
-
 </div>

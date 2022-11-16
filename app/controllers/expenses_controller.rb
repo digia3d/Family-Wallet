@@ -1,6 +1,4 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: %i[show edit update destroy]
-
   before_action :authenticate_user!
 
   def index
@@ -21,12 +19,13 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        @category = ExpenseCategory.create(expense_id: @expense.id, category_id: expense_category_params[:category.id])
+        @category = ExpenseCategory.create(expense_id: @expense.id, category_id: expense_category_params[:category_id])
         @category.increment_total
         format.html do
           redirect_to category_expense_categories_path(@category.category_id),
                       notice: 'Expense was successfully created.'
         end
+
       else
         format.html { render :new, status: :unprocessable_entity }
       end

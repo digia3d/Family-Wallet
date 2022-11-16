@@ -1,10 +1,9 @@
 <p style="color: green"><%= notice %></p>
+<div class="container">
+  <%= render @category %>
 
-<%= render @category %>
-
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
+    <div>
+      <%= link_to "Back to categories", categories_path %>
+      <%= link_to "See all Expenses", category_expenses_path(category) %>
+    </div>
 </div>
