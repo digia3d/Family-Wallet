@@ -6,7 +6,7 @@
         <table class="table">
             <tbody>
                 <% @categories.each do |category| %>
-                    <% if can? :edit, category %>
+                    <% if can? :destroy, category %>
                         <tr>
                             <td>
                             <%= render category %>
