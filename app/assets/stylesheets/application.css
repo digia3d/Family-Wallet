@@ -96,6 +96,8 @@ th {
   justify-content: space-evenly;
   gap: 20px;
   padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
 
 .p1,
@@ -152,4 +154,22 @@ input {
   gap: 20px;
   padding: 20px;
   text-align: center;
+}
+
+.ditails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.rowE {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
