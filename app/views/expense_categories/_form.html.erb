@@ -1,4 +1,4 @@
-<%= form_with(model: expense_category) do |form| %>
+<%= form_with model: [@category, @category.expense_categories.create] do |form| %>
   <% if expense_category.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(expense_category.errors.count, "error") %> prohibited this expense_category from being saved:</h2>
@@ -10,6 +10,18 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="mt-3">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="mt-3">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <%= form.hidden_field :category_id, value: category_id.id %>
 
   <div>
     <%= form.submit %>

@@ -1,14 +1,47 @@
+<%= render partial: "layouts/navbar", locals: {heading: 'EXPENSES CATEGORIES', back_path: categories_path } %>
+<div class="container">
 <p style="color: green"><%= notice %></p>
+  <div class="total-count">
+    <span>Total Amount: </span>
+    <span>$<%= @category.total %></span>
+  </div>
+  <ul class="con2">
+    <li>
+      <h1>
+      <%= @category.name %>
+      <%= image_tag @category.icon, class: 'img' %>
+      </h1>
 
-<h1>Expense categories</h1>
+      <div>
+        <p>
+          <%= @category.description %>
+        </p>
+      </div>
 
-<div id="expense_categories">
-  <% @expense_categories.each do |expense_category| %>
-    <%= render expense_category %>
-    <p>
-      <%= link_to "Show this expense category", expense_category %>
-    </p>
-  <% end %>
+      <div class="ExCat">
+        <% if @expenses.empty? %>
+          <p>No expenses yet</p>
+        <% else %>
+          <% @expenses.each do |expense| %>
+            <ul class="expenseL">
+              <div class="expense-name">
+                <%= expense.name %>
+              </div>
+              <div class="expense-amount">
+                $<%= expense.amount %>
+              </div>
+              <div class="show">
+                <%= link_to 'Show', expense_path(expense) %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+
+  <div class="footer">
+  <%= link_to "New expense category", new_expense_path, class: 'btn-create' %>
+  </div>
+  
 </div>
-
-<%= link_to "New expense category", new_expense_category_path %>

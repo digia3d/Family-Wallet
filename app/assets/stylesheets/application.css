@@ -6,3 +6,150 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 50px;
+}
+
+h1 img {
+  width: 40px;
+}
+
+.ExCat {
+  display: flex;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.con2 li {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.con2 h1,
+.con2 p,
+.con2 div {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 250px;
+}
+
+.fa-solid {
+  color: white;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.nav-link,
+.heading {
+  text-decoration: none;
+  color: rgb(253, 250, 250);
+}
+
+.nav-link:hover {
+  color: rgb(4, 15, 95);
+}
+
+.btn-create {
+  background-color: rgb(100, 182, 37);
+  color: white;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+th {
+  border: none;
+}
+
+.cat {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+}
+
+.p1,
+.p2,
+.p3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.save {
+  background-color: rgb(100, 182, 37);
+  margin-top: 20px;
+}
+
+.submit {
+  background-color: rgb(249, 250, 251);
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  color: royalblue;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+input {
+  height: 50px;
+}
+
+.fieldR {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}

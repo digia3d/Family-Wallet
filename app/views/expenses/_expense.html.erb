@@ -1,17 +1,25 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Index:</strong>
-    <%= expense.index %>
-  </p>
+<div class="container">
+  <div id="<%= dom_id expense %>">
+      <p>
+        <span>Name:</span>
+        <%= expense.name%>
+      </p>
 
-  <p>
-    <strong>New:</strong>
-    <%= expense.new %>
-  </p>
+      <div>
+        <p>Transactionº</p>
+        <span><%= expense.created_at.to_time.to_i %></span>
+        <span class="fa-regular fa-calendar"></span>
+        <span class="mx-2"><%= expense.created_at %></span>
+        
+      </div>
 
-  <p>
-    <strong>Show:</strong>
-    <%= expense.show %>
-  </p>
-
+      <div>
+        <p>Amount: $
+        <span><%= expense.amount %></span>
+        </p>
+      </div>
+      <div>
+  <%= link_to "Back to categories", categories_path %>
+</div>
+  </div>
 </div>
