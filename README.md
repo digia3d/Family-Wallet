@@ -52,3 +52,4 @@ Things you may want to cover:
        rails g devise:views
        
      * Not required *
+
