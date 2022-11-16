@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
   subject do
-    user = User.create(name: "Alex", email: "ujvari65@gmail.com", password: "password")
+    user = User.create(name: 'Alex', email: 'ujvari65@gmail.com', password: 'password')
     Expense.new(
       user_id: user.id,
       amount: 100,
-      name: "Food",
+      name: 'Food'
     )
   end
 

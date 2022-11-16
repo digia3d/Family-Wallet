@@ -5,7 +5,7 @@ RSpec.feature 'Logins', type: :feature do
   scenario 'user can login' do
     fill_in 'user_email', with: 'ujvari65@gmail.com'
     fill_in 'user_password', with: '123456', match: :prefer_exact
-      expect(page).to have_content('Remember me')
+    expect(page).to have_content('Remember me')
   end
 
   scenario 'user can not login with wrong password' do
@@ -19,7 +19,4 @@ RSpec.feature 'Logins', type: :feature do
     fill_in 'user_password', with: '123456', match: :prefer_exact
     expect(page).to have_content('Forgot your password?')
   end
-
-
-
 end

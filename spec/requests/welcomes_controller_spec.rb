@@ -12,16 +12,15 @@ RSpec.describe 'Welcomes', type: :request do
     end
 
     it 'should have a title' do
-      expect(response.body). to include('Family Wallet')
+      expect(response.body).to include('Family Wallet')
     end
 
     it 'should have a link to sign up' do
-      expect(response.body). to include('Sign Up')
+      expect(response.body).to include('Sign Up')
     end
 
     it 'should have a link to log in' do
-      expect(response.body). to include('Log In')
+      expect(response.body).to include('Log In')
     end
   end
 end
-

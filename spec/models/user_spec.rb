@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject(:user) { User.new(name: "Alex", email: "ujvari65@gmail.com", password: "password") }
+  subject(:user) { User.new(name: 'Alex', email: 'ujvari65@gmail.com', password: 'password') }
 
   it 'validates presence of name' do
     user.name = nil
@@ -20,12 +20,12 @@ RSpec.describe User, type: :model do
 
   it 'validates uniqueness of email' do
     user.save
-    user2 = User.new(name: "Alex", email: "ujvari65@gmail.com")
+    user2 = User.new(name: 'Alex', email: 'ujvari65@gmail.com')
     expect(user2).to_not be_valid
   end
 
   it 'validates length of password' do
-    user.password = "pass"
+    user.password = 'pass'
     expect { user.save! }.to raise_error(ActiveRecord::RecordInvalid)
   end
 end
