@@ -1,47 +1,46 @@
 <%= render partial: "layouts/navbar", locals: {heading: 'EXPENSES CATEGORIES', back_path: categories_path } %>
-<div class="container">
 <p style="color: green"><%= notice %></p>
-  <div class="total-count">
-    <span>Total Amount: </span>
-    <span>$<%= @category.total %></span>
-  </div>
-  <ul class="con2">
-    <li>
-      <h1>
-      <%= @category.name %>
+<div class="container">
+    <h1>
       <%= image_tag @category.icon, class: 'img' %>
-      </h1>
+      <%= @category.name %>
+    </h1>
+    <p>
+      <%= @category.description %>
+    </p>
+    <div class="ExCat">
 
-      <div>
-        <p>
-          <%= @category.description %>
-        </p>
-      </div>
-
-      <div class="ExCat">
+        <div class="total-count">
+          <span>Total Amount:  </span>
+          <span><%= @category.total %>$</span>
+        </div>
+      
         <% if @expenses.empty? %>
           <p>No expenses yet</p>
         <% else %>
           <% @expenses.each do |expense| %>
             <ul class="expenseL">
-              <div class="expense-name">
-                <%= expense.name %>
-              </div>
+
               <div class="expense-amount">
                 $<%= expense.amount %>
               </div>
+
+              <div class="expense-name">
+                <%= expense.name %>
+              </div>
+
               <div class="show">
                 <%= link_to 'Show', expense_path(expense) %>
               </div>
-            </div>
+
+            </ul>
           <% end %>
         <% end %>
-      </div>
-    </li>
-  </ul>
+        <%= link_to "Back to categories", categories_path %>
+    </div>
 
-  <div class="footer">
-  <%= link_to "New expense category", new_expense_path, class: 'btn-create' %>
-  </div>
-  
+    <div class="btn-footer">
+    <%= link_to "New expense category", new_expense_path, class: 'btn-create' %>
+    </div>
+    
 </div>

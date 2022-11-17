@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :welcomes
 
-  resources :categories, only: [:index, :new, :create, :edit, :update, :destroy] do
+  resources :categories, only: [:index, :new, :create, :edit, :update] do
     resources :expense_categories, only: [:index]
   end
 

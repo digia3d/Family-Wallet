@@ -21,6 +21,7 @@ h1 img {
 
 .ExCat {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -29,6 +30,15 @@ h1 img {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  max-height: 100%;
+}
+
+.expenseL {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid rgb(203, 211, 245);
 }
 
 .con2 li {
@@ -51,12 +61,18 @@ h1 img {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 250px;
+  margin-bottom: 15rem;
+  padding-top: 2rem;
+  color: rgb(74, 83, 88);
 }
 
 .fa-solid {
   color: white;
+}
+
+.link-to-back {
+  padding-left: 3rem;
+  text-align: center;
 }
 
 .container-fluid {
@@ -96,6 +112,8 @@ th {
   justify-content: space-evenly;
   gap: 20px;
   padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
 
 .p1,
@@ -113,7 +131,7 @@ th {
 }
 
 .submit {
-  background-color: rgb(249, 250, 251);
+  background-color: white;
   margin-top: 20px;
   width: 100%;
   border: none;
@@ -121,11 +139,9 @@ th {
   color: royalblue;
 }
 
-.footer {
+.btn-footer {
   display: flex;
   justify-content: space-evenly;
-  gap: 20px;
-  padding: 20px;
 }
 
 .field {
@@ -136,6 +152,7 @@ th {
 
 input {
   height: 50px;
+  background-color: rgb(43, 104, 235);
 }
 
 .fieldR {
@@ -152,4 +169,57 @@ input {
   gap: 20px;
   padding: 20px;
   text-align: center;
+}
+
+.ditails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.rowE {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.btn-w {
+  text-decoration: none;
+  width: 70%;
+  text-align: center;
+  align-self: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.actions a {
+  background-color: white;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  color: royalblue;
+}
+
+.total-count {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
 }

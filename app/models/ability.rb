@@ -6,8 +6,8 @@ class Ability
       category.user == user
     end
 
-    can [:read, :update, :destroy], Expense do |expense|
-      expense.user == user
+    can [:read, :destroy], Expense do |expense|
+      expense.author == user
     end
 
     can :create, Category
