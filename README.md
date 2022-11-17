@@ -15,6 +15,8 @@
 - PostgreSQL
 - Ruby
 
+# LIVE DEMO [https://family-wallet-heroku.herokuapp.com/]
+
 
 # Configuration
 - **Run app**
