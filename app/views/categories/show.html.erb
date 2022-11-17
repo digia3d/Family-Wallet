@@ -1,0 +1,10 @@
+<%= render partial: "layouts/navbar", locals: {heading: 'CATEGORIES', back_path: categories_path} %>
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <%= render @category %>
+
+    <div class="link-to-back">
+      <%= link_to "Back to categories", categories_path %>
+      <%= link_to "See all Expenses", category_expenses_path(category) %>
+    </div>
+</div>

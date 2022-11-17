@@ -1,0 +1,21 @@
+<%= form_with(model: @expense, url: expenses_path) do |form| %>
+
+  <div class="field mt-3">
+    <%= form.label :category, class: "block text-gray-700 font-bold "%>
+    <%= form.collection_select :category_id, Category.where("user_id = ?", current_user.id).order(:name), :id, :name, class: 'form-control mt-3' %>
+  </div>
+
+  <div>
+    <%= form.text_field :name, class: 'form-control mt-3', placeholder: 'Name' %>
+  </div>
+
+  <div>
+    <%= form.text_field :amount, class: 'form-control mt-3', placeholder: 'Amount' %>
+  </div>
+
+
+
+  <div>
+    <%= form.submit 'Save', class: 'form-control save' %>
+  </div>
+<% end %>

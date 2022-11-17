@@ -1,0 +1,6 @@
+<%= render partial: "layouts/navbar", locals: {heading: 'NEW EXPENSE', back_path: categories_path} %>
+<div class="container">
+
+  <%= render "form", expense: @expense %>
+
+</div>

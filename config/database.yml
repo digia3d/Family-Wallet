@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: aleksandra
+  password: 05062312
+
+development:
+  <<: *default
+  database: Family_Wallet_development
+
+test:
+  <<: *default
+  database: Family_Wallet_test
+
+
+production:
+  <<: *default
+  database: Family_Wallet_production
+  username: Family_Wallet
+  password: <%= ENV["FAMILY_WALLET_DATABASE_PASSWORD"] %>

@@ -1,0 +1,23 @@
+<%= render partial: "layouts/navbar", locals: {heading: 'CATEGORIES', back_path: categories_path} %>
+
+    <p style="color: green"><%= notice %></p>
+
+    <div id="categories">
+        <table class="table">
+            <tbody>
+                <% @categories.each do |category| %>
+                    <% if can? :destroy, category %>
+                        <tr>
+                            <td>
+                            <%= render category %>
+                            <%= link_to 'Edit', edit_category_path(category), class: "btn-edit" %>
+                            </td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            </tbody>
+        </table>
+
+<div class="footer">
+<%= link_to "New category", new_category_path, class: 'btn-create' %>
+</div>
