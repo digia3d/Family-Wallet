@@ -15,10 +15,19 @@
 - PostgreSQL
 - Ruby
 
-# LIVE DEMO [https://family-wallet-heroku.herokuapp.com/]
+## LIVE DEMO [https://family-wallet-heroku.herokuapp.com/]
+
+## Getting Started
+
+### Clone-Locally
+- Enter this url: [https://github.com/digia3d/Family-Wallet](https://github.com/digia3d/Family-Wallet)
+- Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
+- Select download Zip option from drop down menu.
+- Once the download is complete you will be able to access my project locally.
 
 
 ## Configuration
+
 - **Run app**
   - ``rails server`
 
