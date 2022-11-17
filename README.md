@@ -18,14 +18,14 @@
 # LIVE DEMO [https://family-wallet-heroku.herokuapp.com/]
 
 
-# Configuration
+## Configuration
 - **Run app**
   - ``rails server`
 
-# Database creation
+## Database creation
 -``create database Family_Wallet``
 
-# How to run the test suite
+## How to run the test suite
 - Ruby linters test: ``rubocop``
 - Style linter tests: ``npx stylelint "**/*.{css,scss}``"
 ### Instuction
@@ -35,7 +35,7 @@
     - to run the file use : ``rails server``
     - and then run: ``rspec``.
 
-# Testing
+## Testing
 In order to run tests for this project make sure you have installed all previously mentioned [prerequisites](#prerequisites) section, then run the code below.
 
 - Run all tests
