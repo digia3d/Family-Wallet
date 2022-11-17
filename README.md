@@ -17,6 +17,8 @@
 
 ## LIVE DEMO [https://family-wallet-heroku.herokuapp.com/]
 
+## Loom Video [https://www.loom.com/share/ca37197ab54a4e6d85b693e7c2cfd8e3](https://www.loom.com/share/ca37197ab54a4e6d85b693e7c2cfd8e3)
+
 ## Getting Started
 
 ### Clone-Locally
@@ -71,7 +73,7 @@ Feel free to check the [issues page](https://github.com/digia3d/Family-Wallet/is
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- Original design idea by [Gregoire Vella on Behance..](https://www.behance.net/gregoirevella)
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
