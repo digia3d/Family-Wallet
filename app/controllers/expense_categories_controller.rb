@@ -5,6 +5,6 @@ class ExpenseCategoriesController < ApplicationController
 
   def index
     @category = Category.find(params[:category_id])
-    @expenses = @category.expense_categories.includes(:expense).map(&:expense)
+    @expenses = @category.expense_categories.includes(:expense).order(created_at: :desc).map(&:expense)
   end
 end
