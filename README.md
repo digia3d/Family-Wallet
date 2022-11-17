@@ -1,55 +1,70 @@
-# README
+# FAMILY WALLET
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
 
-Things you may want to cover:
+> This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-* Ruby version
+* Ruby version 3.1.2
 
-* System dependencies
+## Built with:
 
-* Configuration
+- Ruby on Rails
+- Rubocop
+- UML schema diagram
+- Boostrap
+- PostgreSQL
+- Ruby
 
-* Database creation
 
-* Database initialization
+# Configuration
+- **Run app**
+  - ``rails server`
 
-* How to run the test suite
+# Database creation
+-``create database Family_Wallet``
 
-* Services (job queues, cache servers, search engines, etc.)
+# How to run the test suite
+- Ruby linters test: ``rubocop``
+- Style linter tests: ``npx stylelint "**/*.{css,scss}``"
+### Instuction
+- Use Rspec gem to test our code.
+- You can run those tests locally if you follow the steps:
+    - install all the gems running : ``bundle install``
+    - to run the file use : ``rails server``
+    - and then run: ``rspec``.
 
-* Deployment instructions
+# Testing
+In order to run tests for this project make sure you have installed all previously mentioned [prerequisites](#prerequisites) section, then run the code below.
 
-* ...
- 1. Ensure you have defined default url options in your environments files. Here
-     is an example of default_url_options appropriate for a development environment
-     in config/environments/development.rb:
+- Run all tests
+  - This should run all tests using 'RSpec-Rails' and (in some cases) 'Capybara'
+  ```sh bundle exec rspec```
 
-       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-     In production, :host should be set to the actual host of your application.
+## Author
 
-     * Required for all applications. *
+👤 **Aleksandra Ujvari**
 
-  2. Ensure you have defined root_url to *something* in your config/routes.rb.
-     For example:
+- GitHub: [@digia3d](https://github.com/digia3d)
+- LinkedIn: [Aleksandra (Digital Marketing A3D) Ujvari](https://www.linkedin.com/in/aleksandra-ujvari-85235a210/) 
+- Twitter: [@ujvari65](https://twitter.com/ujvari65)
 
-       root to: "home#index"
-     
-     * Not required for API-only Applications *
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
 
-  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
-     For example:
 
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+Feel free to check the [issues page](https://github.com/digia3d/Family-Wallet/issues).
 
-     * Not required for API-only Applications *
+## Show your support
 
-  4. You can copy Devise views (for customization) to your app by running:
+Give a ⭐️ if you like this project!
 
-       rails g devise:views
-       
-     * Not required *
+## Acknowledgments
 
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
