@@ -1,11 +1,11 @@
 <div class="container">
   <div id="<%= dom_id expense %>", class="ditails">
-      <p class="rowE">
+      <p class="container-flud mx-3 px-2 bg-white border-bottom">
         <span>Name:</span>
         <%= expense.name%>
       </p>
 
-      <div class="rowE">
+      <div class="container-flud mx-3 px-2 bg-white border-bottom">
         <p>Transactionº</p>
         <span><%= expense.created_at.to_time.to_i %></span>
         <span class="fa-regular fa-calendar"></span>
@@ -13,13 +13,10 @@
         
       </div>
 
-      <div class="rowE">
+      <div class="container-flud mx-3 px-2 bg-white border-bottom">
         <p>Amount: $
         <span><%= expense.amount %></span>
         </p>
       </div>
-      <div>
-  
-</div>
   </div>
 </div>
