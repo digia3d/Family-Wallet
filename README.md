@@ -17,6 +17,8 @@
 
 ## LIVE DEMO [https://family-wallet-heroku.herokuapp.com/]
 
+## Loom Video [https://www.loom.com/share/ca37197ab54a4e6d85b693e7c2cfd8e3](https://www.loom.com/share/ca37197ab54a4e6d85b693e7c2cfd8e3)
+
 ## Getting Started
 
 ### Clone-Locally
