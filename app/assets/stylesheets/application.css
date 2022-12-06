@@ -1,14 +1,32 @@
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,300&family=Playfair+Display:ital,wght@1,600;1,800&display=swap');
 
 * {
-  font-family: 'Proxima Nova 2', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: rgb(7, 61, 7);
+}
+
+.logo {
+  display: flex;
+  max-width: 50px;
+  margin-left: 2px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(40, 66, 40);
 }
 
 body {
   background-color: #f5f5f5;
+  background-image: url('https://cdn.pixabay.com/photo/2015/09/15/15/53/bank-notes-941246__480.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -30,7 +48,8 @@ h1 img {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  max-height: 100%;
+  max-height: 80%;
+  backdrop-filter: blur(5px);
 }
 
 .expenseL {
@@ -61,9 +80,29 @@ h1 img {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 15rem;
+  margin-bottom: 3rem;
   padding-top: 2rem;
-  color: rgb(74, 83, 88);
+  color: #284228;
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-w,
+.btn-primary {
+  background-color: rgb(100, 182, 37);
+}
+
+.btn-w {
+  text-decoration: none;
+  width: 70%;
+  text-align: center;
+  align-self: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.btn-w:hover,
+.btn-primary:hover {
+  background-color: rgb(143, 231, 159) !important;
 }
 
 .fa-solid {
@@ -80,6 +119,7 @@ h1 img {
   align-items: center;
   gap: 20px;
   padding: 20px;
+  justify-content: space-evenly;
 }
 
 .nav-link,
@@ -88,8 +128,12 @@ h1 img {
   color: rgb(253, 250, 250);
 }
 
+.heading {
+  font-family: 'Playfair Display', serif;
+}
+
 .nav-link:hover {
-  color: rgb(4, 15, 95);
+  color: rgb(143, 231, 159);
 }
 
 .btn-create {
@@ -114,6 +158,7 @@ th {
   padding: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px #ccc;
+  backdrop-filter: blur(5px) brightness(0.8);
 }
 
 .p1,
@@ -123,6 +168,8 @@ th {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  color: rgb(206, 237, 182);
+  font-weight: 700;
 }
 
 .save {
@@ -131,12 +178,13 @@ th {
 }
 
 .submit {
-  background-color: white;
+  background-color: #08391a;
   margin-top: 20px;
-  width: 100%;
+  width: 20%;
+  border-radius: 15px;
   border: none;
-  text-align: left;
-  color: royalblue;
+  color: rgb(14, 174, 35);
+  text-align: center;
 }
 
 .btn-footer {
@@ -152,7 +200,7 @@ th {
 
 input {
   height: 50px;
-  background-color: rgb(240, 243, 248);
+  background-color: transparent;
 }
 
 .fieldR {
@@ -189,15 +237,6 @@ input {
   box-shadow: 0 0 10px #ccc;
 }
 
-.btn-w {
-  text-decoration: none;
-  width: 70%;
-  text-align: center;
-  align-self: center;
-  padding: 10px 0;
-  border-radius: 10px;
-}
-
 .actions {
   display: flex;
   gap: 20px;
@@ -206,13 +245,23 @@ input {
   align-items: center;
 }
 
+.btn-edit {
+  background-color: rgb(100, 182, 37);
+  text-decoration: none;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(4, 73, 35);
+}
+
 .actions a {
-  background-color: white;
+  background-color: transparent;
   margin-top: 20px;
-  width: 100%;
   border: none;
   text-align: left;
-  color: royalblue;
+  color: rgb(6, 77, 20);
 }
 
 .total-count {
@@ -222,4 +271,37 @@ input {
   padding: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px #ccc;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.p1 a:hover,
+.p2 a:hover,
+.p3 a:hover {
+  color: rgb(143, 231, 159);
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(52, 216, 6);
+  backdrop-filter: blur(5px);
+  margin: 0 4rem 0 4rem;
+}
+
+.form-control,
+#category_icon {
+  background-color: #09e20988;
 }
